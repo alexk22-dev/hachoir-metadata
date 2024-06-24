@@ -62,7 +62,7 @@ def main():
         command = ["pyuic4", "-o", dialog_python, dialog + ".ui"]
         try:
             exitcode = call(command)
-        except (OSError, err):
+        except OSError:
             exitcode = 1
         if exitcode:
             if path.exists(dialog_python):
